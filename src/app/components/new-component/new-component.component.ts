@@ -10,5 +10,6 @@ import { Component } from '@angular/core';
   styles:[],
 })
 export class NewComponent  {
+  public name = 'New Component';
 
 }

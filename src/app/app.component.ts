@@ -5,11 +5,12 @@ import { RouterOutlet } from '@angular/router';
 //Components
 import { NewComponent } from './components/new-component/new-component.component';
 import { TemplateBindingComponent } from './components/template/template-binding/template-binding.component';
+import { TemplateVariablesComponent } from './components/template/template-variables/template-variables.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, NewComponent, TemplateBindingComponent],
+  imports: [RouterOutlet, CommonModule, NewComponent, TemplateBindingComponent, TemplateVariablesComponent],
   styles:[
     `
       h1 {
@@ -17,10 +18,12 @@ import { TemplateBindingComponent } from './components/template/template-binding
       }
     `],
   template: `
+  <!-- <app-template-binding/> -->
   <!--router-outlet></!--router-outlet> -->
+  <app-template-variables/>
   <h1>Curso de angular</h1>
-  <app-template-binding/>
- 
+
+
 
   `,
   styleUrl: './app.component.scss'
