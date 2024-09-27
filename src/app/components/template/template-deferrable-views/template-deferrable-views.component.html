@@ -1,10 +1,11 @@
 <h2 #trigger>Deferables Views</h2>
-<button (click)="isTrue = true"> Add true</button>
-@defer(when loadingData$ | async) {
+
+<!-- <button (click)="isTrue = true"> Add true</button> -->
+@defer(on interaction) {
 <app-new-component />
 } @placeholder() {
-  <p #trigger2>Mostrar antes de carregar algo.</p>
-} @loading() {
+  <p>Mostrar antes de carregar algo.</p>
+} @loading(minimum 5s) {
     <p>loading...</p>
 } @error {
   <p>Loading Failed : (</p>
