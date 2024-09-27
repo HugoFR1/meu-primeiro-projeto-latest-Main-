@@ -18,4 +18,6 @@ export class TemplateDeferrableViewsComponent {
     'item 2',
     'item 3',
   ]).pipe(delay(3000));
+
+  //teste
 }
