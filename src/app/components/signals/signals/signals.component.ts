@@ -1,5 +1,6 @@
+import { Component, computed, effect, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component, computed, signal } from '@angular/core';
+
 
 @Component({
   selector: 'app-signals',
@@ -20,6 +21,10 @@ export class SignalsComponent {
     public array = signal([1]);
 
     constructor( ) {
+      effect(() => {
+        console.log(this.firstName())
+        console.log(this.array())
+      })
     }
 
     public updateName() {
@@ -37,5 +42,3 @@ export class SignalsComponent {
       })
    }
 }
-
-// teste
